@@ -9,11 +9,27 @@
 
     <script src="../js/utilidades.js"></script>
 
+    <script>
+
+        function llamarMostrarpais(){
+
+            var selectPaises = document.getElementById("selectPaises");
+            mostrarDatosPaisSeleccionado(selectPaises.value);
+
+        }
+   
+   </script>
+
 </head>
 <body>
 
     <h1>Paises</h1>
 
+
+    <button onclick="poblarDatosPaises()"> Poblar Datos Paises</button>
+    <select  id="selectPaises" onchange="llamarMostrarpais()"></select>
+
+    
     <table id="tablaPaises">
         <tr>
             <th>Nombre Oficial</th>
@@ -23,12 +39,7 @@
         </tr>
     </table>
 
-    <script>
-
-    poblarDatosPaises();
     
-    </script>
-
     
 </body>
 </html>
