@@ -4,42 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplo API JS</title>
-
-    <script src="../js/consumirapipaises.js"></script>
-
-    <script src="../js/utilidades.js"></script>
-
-    <script>
-
-        function llamarMostrarpais(){
-
-            var selectPaises = document.getElementById("selectPaises");
-            mostrarDatosPaisSeleccionado(selectPaises.value);
-
-        }
-   
-   </script>
-
+    <script src="consumirapipaises.js"></script>
 </head>
 <body>
-
     <h1>Paises</h1>
-
-
-    <button onclick="poblarDatosPaises()"> Poblar Datos Paises</button>
-    <select  id="selectPaises" onchange="llamarMostrarpais()"></select>
-
-    
-    <table id="tablaPaises">
+    <button onclick="poblarDatosPaises()">Poblar datos paises</button>
+    <select name="selectPaises" id="selectPaises" onchange="llamarmostrarPais()"></select>
+    <table id="tablaPaises" border="1"> 
         <tr>
-            <th>Nombre Oficial</th>
+            <th>Nombre oficial</th>
             <th>Capitales</th>
-            <th>Region</th>
-            <th></th>
+            <th>Región</th>
+            <th>Moneda</th>
+            <th>Banderas</th>
+            <th>Poblacion</th>
         </tr>
     </table>
-
-    
-    
+    <script>
+        function llamarmostrarPais() {
+            var selectPaises = document.getElementById("selectPaises");
+            mostrarDatosPaisSeleccionado(selectPaises.value);
+        }
+    </script>
 </body>
 </html>
